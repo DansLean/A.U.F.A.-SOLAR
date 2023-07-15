@@ -1,0 +1,154 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Sprites/boxEmpty.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/chain.png" type="Texture" id=2]
+[ext_resource path="res://Tilemap/level_01.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/pilhadeAUFA.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/PlayerInit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Background.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/Test.gd" type="Script" id=7]
+[ext_resource path="res://Fonts/Silkscreen-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Sprites/Player/Off.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 8 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 22 )
+
+[node name="StartLevel" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="PlayerInit" parent="." instance=ExtResource( 5 )]
+position = Vector2( 105, 167 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 105, 167 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 8
+format = 1
+tile_data = PoolIntArray( -1, 6, 0, -65536, 7, 0, -65535, 7, 0, -65534, 7, 0, -65533, 7, 0, -65532, 7, 0, -65531, 7, 0, -65530, 7, 0, -65529, 7, 0, -65528, 7, 0, -65527, 7, 0, -65526, 7, 0, -65525, 7, 0, -65524, 7, 0, -65523, 7, 0, -65522, 7, 0, -65521, 7, 0, -65520, 7, 0, -65519, 7, 0, -65518, 7, 0, -65517, 7, 0, -65516, 8, 0, 65535, 9, 0, 0, 5, 0, 1, 5, 0, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 6, 5, 0, 7, 5, 0, 8, 5, 0, 9, 5, 0, 10, 5, 0, 11, 5, 0, 12, 5, 0, 13, 5, 0, 14, 5, 0, 15, 5, 0, 16, 5, 0, 17, 5, 0, 18, 5, 0, 19, 5, 0, 20, 10, 0, 131071, 9, 0, 65536, 5, 0, 65546, 16, 0, 65550, 16, 0, 65555, 5, 0, 65556, 10, 0, 196607, 9, 0, 131072, 5, 0, 131091, 5, 0, 131092, 10, 0, 262143, 9, 0, 196608, 5, 0, 196627, 5, 0, 196628, 10, 0, 327679, 9, 0, 262144, 5, 0, 262163, 5, 0, 262164, 10, 0, 393215, 9, 0, 327680, 5, 0, 327699, 5, 0, 327700, 10, 0, 458751, 9, 0, 393216, 5, 0, 393235, 5, 0, 393236, 10, 0, 524287, 9, 0, 458752, 5, 0, 458771, 5, 0, 458772, 10, 0, 589823, 9, 0, 524288, 5, 0, 655359, 9, 0, 589824, 5, 0, 720895, 9, 0, 655360, 5, 0, 786431, 9, 0, 720896, 5, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0, 720914, 1, 0, 720915, 1, 0, 720916, 1, 0, 720917, 1, 0, 720918, 1, 0, 720919, 1, 0, 720920, 1, 0, 851967, 11, 0, 786432, 12, 0, 786433, 12, 0, 786434, 12, 0, 786435, 12, 0, 786436, 12, 0, 786437, 12, 0, 786438, 12, 0, 786439, 12, 0, 786440, 12, 0, 786441, 12, 0, 786442, 12, 0, 786443, 12, 0, 786444, 12, 0, 786445, 12, 0, 786446, 12, 0, 786447, 12, 0, 786448, 12, 0, 786449, 12, 0, 786450, 12, 0, 786451, 12, 0, 786452, 13, 0 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
+
+[node name="chains" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="chains"]
+position = Vector2( 192, 25 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="chains"]
+position = Vector2( 192, 42 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite9" type="Sprite" parent="chains"]
+position = Vector2( 40, 24 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite10" type="Sprite" parent="chains"]
+position = Vector2( 40, 40 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite11" type="Sprite" parent="chains"]
+position = Vector2( 40, 56 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite12" type="Sprite" parent="chains"]
+position = Vector2( 72, 24 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite13" type="Sprite" parent="chains"]
+position = Vector2( 72, 40 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="chains"]
+position = Vector2( 192, 59 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="chains"]
+position = Vector2( 192, 76 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite5" type="Sprite" parent="chains"]
+position = Vector2( 256, 25 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite6" type="Sprite" parent="chains"]
+position = Vector2( 256, 42 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite7" type="Sprite" parent="chains"]
+position = Vector2( 256, 59 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="Sprite8" type="Sprite" parent="chains"]
+position = Vector2( 256, 76 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="sign" type="Node2D" parent="."]
+position = Vector2( 178, 81 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="sign"]
+margin_left = -5.71431
+margin_top = 4.28569
+margin_right = 138.286
+margin_bottom = 62.2857
+texture = ExtResource( 1 )
+patch_margin_left = 10
+patch_margin_top = 15
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="Label" type="Label" parent="sign/NinePatchRect"]
+margin_left = 7.14287
+margin_top = 15.7143
+margin_right = 135.143
+margin_bottom = 40.7143
+custom_colors/font_color = Color( 0.968627, 0.952941, 0.0156863, 1 )
+custom_colors/font_outline_modulate = Color( 0.968627, 0.952941, 0.0156863, 1 )
+custom_colors/font_color_shadow = Color( 0.392157, 0.101961, 0.0352941, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "A.U.F.A. SOLAR - automato
+auxiliar familiar solar"
+
+[node name="pilhadeAUFA" parent="." instance=ExtResource( 4 )]
+position = Vector2( 56, 167 )
+scale = Vector2( 0.25, 0.25 )
+
+[node name="Sprite" type="Sprite" parent="pilhadeAUFA"]
+modulate = Color( 0.521569, 0.521569, 0.521569, 1 )
+position = Vector2( 548, 0 )
+texture = ExtResource( 9 )
+
+[node name="Sprite2" type="Sprite" parent="pilhadeAUFA"]
+modulate = Color( 0.521569, 0.521569, 0.521569, 1 )
+position = Vector2( 816, 0 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 346, 152 )
+shape = SubResource( 2 )
+
+[connection signal="end" from="PlayerInit" to="." method="_on_PlayerInit_end"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

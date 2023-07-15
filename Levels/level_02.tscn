@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Tilemap/backgrounds/bg_castle.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/level_02.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/FallingPlatform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Watertrap/watertrap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Tilemap/level_01.tres" type="TileSet" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 20 )
+
+[node name="level_02" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 512, 512 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, -256 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 8
+format = 1
+tile_data = PoolIntArray( -1048577, 6, 0, -1114112, 7, 0, -1114111, 7, 0, -1114110, 7, 0, -1114109, 7, 0, -1114108, 7, 0, -1114107, 7, 0, -1114106, 7, 0, -1114105, 7, 0, -1114104, 7, 0, -1114103, 7, 0, -1114102, 7, 0, -1114101, 7, 0, -1114100, 7, 0, -1114099, 7, 0, -1114098, 7, 0, -1114097, 7, 0, -1114096, 7, 0, -1114095, 7, 0, -1114094, 7, 0, -1114093, 7, 0, -1114092, 7, 0, -1114091, 7, 0, -1114090, 7, 0, -1114089, 7, 0, -1114088, 7, 0, -1114087, 7, 0, -1114086, 7, 0, -1114085, 7, 0, -1114084, 7, 0, -1114083, 7, 0, -1114082, 7, 0, -1114081, 7, 0, -1114080, 7, 0, -1114079, 7, 0, -1114078, 7, 0, -1114077, 8, 0, -983041, 9, 0, -1048541, 10, 0, -917505, 9, 0, -983005, 10, 0, -851969, 9, 0, -917469, 10, 0, -786433, 9, 0, -851933, 10, 0, -720897, 9, 0, -786397, 10, 0, -655361, 9, 0, -720861, 10, 0, -589825, 9, 0, -655325, 10, 0, -524289, 9, 0, -589789, 10, 0, -458753, 9, 0, -524253, 10, 0, -393217, 9, 0, -458717, 10, 0, -327681, 9, 0, -393181, 10, 0, -262145, 9, 0, -327645, 10, 0, -196609, 9, 0, -262109, 10, 0, -131073, 9, 0, -196573, 10, 0, -65537, 9, 0, -131037, 10, 0, -1, 9, 0, -65501, 10, 0, 65535, 9, 0, 35, 10, 0, 131071, 9, 0, 65571, 10, 0, 196607, 9, 0, 131107, 10, 0, 262143, 9, 0, 196643, 10, 0, 327679, 9, 0, 393215, 9, 0, 458751, 9, 0, 524287, 9, 0, 458752, 0, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 2, 0, 458779, 0, 0, 458780, 0, 0, 458781, 0, 0, 458782, 0, 0, 458783, 0, 0, 458784, 1, 0, 458785, 2, 0, 458786, 2, 0, 458787, 0, 0, 458788, 1, 0, 458789, 0, 0, 458790, 0, 0, 458791, 0, 0, 458792, 0, 0, 458793, 0, 0, 458794, 0, 0, 458795, 0, 0, 458796, 0, 0, 458797, 0, 0, 458798, 0, 0, 458799, 0, 0, 589823, 9, 0, 524288, 3, 0, 524289, 4, 0, 524290, 4, 0, 524291, 4, 0, 524292, 5, 0, 524323, 10, 0, 655359, 9, 0, 589824, 3, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 5, 0, 589859, 10, 0, 720895, 9, 0, 655360, 3, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 5, 0, 655395, 10, 0, 786431, 9, 0, 720896, 3, 0, 720897, 3, 0, 720898, 3, 0, 720899, 3, 0, 720900, 3, 0, 720931, 10, 0, 851967, 9, 0, 786467, 10, 0, 917503, 9, 0, 852003, 10, 0, 983039, 9, 0, 917539, 10, 0, 1048575, 9, 0, 983075, 10, 0, 1114111, 11, 0, 1048576, 12, 0, 1048577, 12, 0, 1048578, 12, 0, 1048579, 12, 0, 1048580, 12, 0, 1048581, 12, 0, 1048582, 12, 0, 1048583, 12, 0, 1048584, 12, 0, 1048585, 12, 0, 1048586, 12, 0, 1048587, 12, 0, 1048588, 12, 0, 1048589, 12, 0, 1048590, 12, 0, 1048591, 12, 0, 1048592, 12, 0, 1048593, 12, 0, 1048594, 12, 0, 1048595, 12, 0, 1048596, 12, 0, 1048597, 12, 0, 1048598, 12, 0, 1048599, 12, 0, 1048600, 12, 0, 1048601, 12, 0, 1048602, 12, 0, 1048603, 12, 0, 1048604, 12, 0, 1048605, 12, 0, 1048606, 12, 0, 1048607, 12, 0, 1048608, 12, 0, 1048609, 12, 0, 1048610, 12, 0, 1048611, 13, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 12, 100 )
+
+[node name="FallingPlatform" parent="." instance=ExtResource( 4 )]
+position = Vector2( 128, 128 )
+
+[node name="FallingPlatform2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 192, 128 )
+
+[node name="FallingPlatform3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 256, 128 )
+
+[node name="FallingPlatform4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 320, 128 )
+
+[node name="FallingPlatform5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 384, 128 )
+
+[node name="watertrap" parent="." instance=ExtResource( 5 )]
+position = Vector2( 110, 187 )
+
+[node name="watertrap2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 329, 187 )
+
+[node name="watertrap5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 548, 187 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 211, 44 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 315, 43 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
