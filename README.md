@@ -46,7 +46,7 @@ O objetivo acadêmico do trabalho era aplicar, num produto completo e jogável, 
 |---|---|
 | **Engine** | Godot Engine 3.5.1 |
 | **Linguagem** | GDScript |
-| **Gênero** | Plataforma 2D / Precision platformer |
+| **Gênero** | Plataforma 2D |
 | **Estilo visual** | Pixel art, resolução nativa 320×192 |
 | **Modo de jogo** | Single-player |
 | **Plataforma** | Windows (executável) |
