@@ -15,7 +15,7 @@
 
 **[Assista ao gameplay](#gameplay-em-vídeo)** · **[🎮 Baixe e jogue](#onde-está-o-executável)**
 
-*Projeto final da cadeira de Introdução à Programação — Engenharia de Computação*
+*Projeto final da cadeira de Introdução à Programação, Engenharia de Computação*
 
 </div>
 
@@ -67,7 +67,7 @@ O objetivo acadêmico do trabalho era aplicar, num produto completo e jogável, 
 <div align="center">
 <img src="READMEFiles/Level1.png" width="720" alt="A placa da primeira fase revela o significado da sigla">
 <br>
-<em>A placa logo no início da fase 1 entrega o significado da sigla — e a pilha de autômatos desligados conta o resto.</em>
+<em>A placa logo no início da fase 1 entrega o significado da sigla, e a pilha de autômatos desligados conta o resto.</em>
 </div>
 
 > **Sinopse**
@@ -76,7 +76,7 @@ O objetivo acadêmico do trabalho era aplicar, num produto completo e jogável, 
 > uma unidade A.U.F.A SOLAR acorda e precisa sair o mais rápido possível para não descarregar antes de ver a luz do sol. Será que 
 > ela vai sobreviver aos perigos dessa masmorra e conseguir escapar a tempo?
 
-**Loop de jogo em uma frase:** você acorda em um mundo hostil, atravessa três fases desviando de armadilhas mortais — e **um único toque acaba com tudo**.
+**Loop de jogo em uma frase:** você acorda em um mundo hostil, atravessa três fases desviando de armadilhas mortais, e **um único toque acaba com tudo**.
 
 ### Pilares de design
 
@@ -113,7 +113,7 @@ Export/
 > ⚠️ **Windows SmartScreen:** por ser um executável sem assinatura digital, o Windows pode exibir um aviso.
 > Clique em **Mais informações → Executar assim mesmo**.
 >
-> 💡 O arquivo `.zip` contém a mesma build — útil se você precisar enviar o jogo para outra pessoa.
+> 💡 O arquivo `.zip` contém a mesma build, útil se você precisar enviar o jogo para outra pessoa.
 
 ### Controles
 
@@ -133,12 +133,12 @@ Export/
 
 <div align="center">
 
-| Menu principal | Fase 1 — o despertar |
+| Menu principal | Fase 1, o despertar |
 |:---:|:---:|
 | <img src="READMEFiles/Home.png" width="400" alt="Menu principal"> | <img src="READMEFiles/Level1.png" width="400" alt="Fase 1"> |
-| *Start, Controls e Quit — navegação por teclado* | *A pilha de autômatos desligados e a placa de apresentação* |
+| *Start, Controls e Quit, navegação por teclado* | *A pilha de autômatos desligados e a placa de apresentação* |
 
-| Fase 2 — a travessia | Fase 3 — os espinhos |
+| Fase 2, a travessia | Fase 3, os espinhos |
 |:---:|:---:|
 | <img src="READMEFiles/Level2.png" width="400" alt="Fase 2"> | <img src="READMEFiles/Level3.png" width="400" alt="Fase 3"> |
 | *Saltos calculados sobre a poça d'água mortal* | *Plataformas suspensas sob um teto de espinhos* |
@@ -146,7 +146,7 @@ Export/
 | Game Over | Vitória |
 |:---:|:---:|
 | <img src="READMEFiles/GameOver.png" width="400" alt="Tela de Game Over"> | <img src="READMEFiles/FinalScreen.png" width="400" alt="Tela de vitória"> |
-| *Um toque basta — o botão **Again** devolve ao menu* | *O autômato finalmente sorri* |
+| *Um toque basta, o botão **Again** devolve ao menu* | *O autômato finalmente sorri* |
 
 </div>
 
@@ -157,16 +157,19 @@ Export/
 <div align="center">
 
 <!--
-  O player abaixo lê o arquivo READMEFiles/Gameplay.mp4 direto do repositório.
-  Se por algum motivo ele não tocar na página do GitHub, a alternativa mais garantida é:
-  abrir uma issue no repo, arrastar o Gameplay.mp4 para a caixa de texto, copiar o link
-  gerado (https://github.com/user-attachments/assets/...) e usá-lo no src deste <video>.
+  O GitHub remove a tag <video> do README (o sanitizador dele apaga o elemento inteiro),
+  então o gameplay aparece aqui como GIF. Para ter um player de verdade, com som:
+  1. abra uma issue nova no repositório (não precisa enviar);
+  2. arraste o arquivo READMEFiles/Gameplay.mp4 para dentro da caixa de texto e espere o upload;
+  3. o GitHub gera um link https://github.com/user-attachments/assets/...
+  4. cole esse link sozinho numa linha, aqui embaixo, e feche a issue sem publicar.
+  Um link de anexo do GitHub vira player automaticamente; o caminho do repositório, não.
 -->
-<video src="https://github.com/DansLean/A.U.F.A.-SOLAR/raw/main/READMEFiles/Gameplay.mp4" width="720" controls muted playsinline></video>
+<img src="READMEFiles/Gameplay.gif" width="720" alt="Gameplay de A.U.F.A. Solar: fases 1 e 2">
 
-**[Baixar o vídeo de gameplay](READMEFiles/Gameplay.mp4)** *(1920×1080 · ~16 MB)*
+**[Assistir à partida completa, com som](READMEFiles/Gameplay.mp4)** *(1m47s · 1920×1080 · ~16 MB)*
 
-<em>Partida completa: do despertar na fase 1 até a tela de vitória.</em>
+<em>Prévia sem som das duas primeiras fases. O vídeo completo vai do despertar na fase 1 até a tela de vitória.</em>
 
 </div>
 
@@ -176,7 +179,7 @@ Export/
 
 ### O personagem
 
-O jogador controla um `KinematicBody2D` com física escrita à mão — nada de motor de personagem pronto:
+O jogador controla um `KinematicBody2D` com física escrita à mão, nada de motor de personagem pronto:
 
 | Parâmetro | Valor | Efeito no jogo |
 |---|---:|---|
@@ -186,7 +189,7 @@ O jogador controla um `KinematicBody2D` com física escrita à mão — nada de 
 | `health` | `1` | **Um toque = morte** |
 | `knockback_int` | `500` | Empurrão ao levar dano |
 
-A detecção de chão é feita por um conjunto de `RayCast2D` (nó `$raycasts`), o que dá controle fino sobre quando o pulo é permitido. As animações — `idle`, `run`, `jump`, `hit` — trocam automaticamente conforme velocidade e estado de contato com o solo.
+A detecção de chão é feita por um conjunto de `RayCast2D` (nó `$raycasts`), o que dá controle fino sobre quando o pulo é permitido. As animações, `idle`, `run`, `jump`, `hit`, trocam automaticamente conforme velocidade e estado de contato com o solo.
 
 ### Armadilhas e obstáculos
 
@@ -194,7 +197,7 @@ A detecção de chão é feita por um conjunto de `RayCast2D` (nó `$raycasts`),
 |---|---|---|
 | 🧱 **Plataforma instável** | `FallingPlatform` | Treme ao ser pisada e despenca logo depois; reaparece após `reset_timer` segundos |
 | ⬇️ **Teto descendente** | `FallingRoof` | Desce continuamente e esmaga quem ficar parado |
-| 🔺 **Espinhos** | `espinhos.tscn` | Dano por contato — morte imediata |
+| 🔺 **Espinhos** | `espinhos.tscn` | Dano por contato, morte imediata |
 | 💧 **Água** | `Watertrap` | Poça mortal no chão da fase |
 | 🕳️ **Zona de queda** | `FallZone` | Área invisível abaixo do nível; cair nela leva direto ao Game Over |
 
@@ -221,7 +224,7 @@ Cada fase termina com um `Area2D` posicionado na linha de chegada: ao detectá-l
 > acostumando o jogador aos poucos com cada mecânica diferente e sempre ir agregando novas para incrementar
 > o nível de dificuldade, tudo de forma crescente e sem quebrar a tensão a cada novo segundo que passava.
 
-### Fase 1 — *Início*
+### Fase 1, *Início*
 
 <img src="READMEFiles/Level1.png" width="560" alt="Fase 1">
 
@@ -229,7 +232,7 @@ Cada fase termina com um `Area2D` posicionado na linha de chegada: ao detectá-l
 
 *O jogador encontra o lugar abandonado e fica curioso para entender o que aconteceu, enquanto brinca com os controles e entende como se anda.*
 
-### Fase 2 — *Pulos*
+### Fase 2, *Pulos*
 
 <img src="READMEFiles/Level2.png" width="560" alt="Fase 2">
 
@@ -237,7 +240,7 @@ Cada fase termina com um `Area2D` posicionado na linha de chegada: ao detectá-l
 
 *A partir daqui o jogador começa a entender como pular entre plataformas e o esforço que deve ser feito para cada distância de pulos.*
 
-### Fase 3 — *Espinhos*
+### Fase 3, *Espinhos*
 
 <img src="READMEFiles/Level3.png" width="560" alt="Fase 3">
 
@@ -255,7 +258,7 @@ A.U.F.A.-SOLAR/
 ├── export_presets.cfg     # Presets de exportação (Windows e HTML5)
 │
 ├── Scripts/               # Toda a lógica em GDScript
-│   ├── Global.gd          #   Singleton (autoload) — contagem de estrelas
+│   ├── Global.gd          #   Singleton (autoload), contagem de estrelas
 │   ├── Player.gd          #   Movimento, pulo, animação, dano e knockback
 │   ├── HUD.gd             #   Exibição do contador de estrelas
 │   ├── Star.gd            #   Coletável
@@ -283,7 +286,7 @@ A.U.F.A.-SOLAR/
 
 ### Configurações da engine
 
-- **Resolução base:** 320×192, com *stretch* `2d` e *aspect* `keep` — o jogo escala mantendo a nitidez do pixel art
+- **Resolução base:** 320×192, com *stretch* `2d` e *aspect* `keep`, o jogo escala mantendo a nitidez do pixel art
 - **Autoload:** `Global.gd`, acessível de qualquer cena
 - **Camadas de física nomeadas:** `Player`, `Enemies`, `Items`, `World`, `Traps`, `Hurtboxes`, `Hitboxes`
 
@@ -291,12 +294,12 @@ A.U.F.A.-SOLAR/
 
 ## Rodando a partir do código-fonte
 
-Só é necessário se você quiser **editar** o jogo — para apenas jogar, use o executável em `Export/`.
+Só é necessário se você quiser **editar** o jogo. Para apenas jogar, use o executável em `Export/`.
 
 1. Baixe a **Godot Engine 3.5.1** (versão *standard*, não a .NET/Mono):
    👉 https://godotengine.org/download/archive/3.5.1-stable/
 
-   > ⚠️ O projeto **não abre corretamente na Godot 4.x** — a sintaxe do GDScript mudou entre as versões.
+   > ⚠️ O projeto **não abre corretamente na Godot 4.x**, a sintaxe do GDScript mudou entre as versões.
 
 2. Clone o repositório:
    ```bash
