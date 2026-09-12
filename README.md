@@ -55,9 +55,10 @@ O objetivo acadêmico do trabalho era aplicar, num produto completo e jogável, 
 
 > **Conceito e inspiração**
 >
-> * Diel escreva aqui de onde veio a ideia do jogo: o que significa "A.U.F.A.", qual foi a inspiração
-> (jogos de referência, etc), e qual sensação nós
-> queriamos provocar no jogador.*
+> Queríamos fazer um jogo simples de plataforma para apresentar o que aprendemos na cadeira de forma divertida
+> e lúdica. A partir daí criamos o nosso robô, o A.U.F.A-SOLAR, para aplicar esses conceitos e criar uma experiência
+> que nos deixasse satisfeitos, unindo o útil ao agradável.
+
 
 ---
 
@@ -71,9 +72,9 @@ O objetivo acadêmico do trabalho era aplicar, num produto completo e jogável, 
 
 > **Sinopse**
 >
-> *Conte aqui a história do jogo. Quem é o personagem? Onde ele acordou?
-> O que ele está buscando? O jogo abre com uma cutscene do
-> personagem despertando (`PlayerInit`), então vale a pena explicar o que aconteceu antes disso.*
+> Um autômato doméstico ecológico foi descartado em massa após uma grande tragédia. Confinados no covil em que foram abandonados, 
+> uma unidade A.U.F.A SOLAR acorda e precisa sair o mais rápido possível para não descarregar antes de ver a luz do sol. Será que 
+> ela vai sobreviver aos perigos dessa masmorra e conseguir escapar a tempo?
 
 **Loop de jogo em uma frase:** você acorda em um mundo hostil, atravessa três fases desviando de armadilhas mortais — e **um único toque acaba com tudo**.
 
@@ -137,7 +138,7 @@ Export/
 | <img src="READMEFiles/Home.png" width="400" alt="Menu principal"> | <img src="READMEFiles/Level1.png" width="400" alt="Fase 1"> |
 | *Start, Controls e Quit — navegação por teclado* | *A pilha de autômatos desligados e a placa de apresentação* |
 
-| Fase 2 — a travessia | Fase 3 — as lâminas |
+| Fase 2 — a travessia | Fase 3 — os espinhos |
 |:---:|:---:|
 | <img src="READMEFiles/Level2.png" width="400" alt="Fase 2"> | <img src="READMEFiles/Level3.png" width="400" alt="Fase 3"> |
 | *Saltos calculados sobre a poça d'água mortal* | *Plataformas suspensas sob um teto de espinhos* |
@@ -216,32 +217,33 @@ Cada fase termina com um `Area2D` posicionado na linha de chegada: ao detectá-l
 
 ## Fases
 
-> *Descreva abaixo o que torna cada fase diferente: qual mecânica ela apresenta e qual é o
-> desafio central. Isso ajuda quem for jogar (e o professor) a entender as decisões de level design.*
+> Em cada fase foi introduzida de maneira cumulativa cada mecânica que queríamos implementar. A ideia era ir
+> acostumando o jogador aos poucos com cada mecânica diferente e sempre ir agregando novas para incrementar
+> o nível de dificuldade, tudo de forma crescente e sem quebrar a tensão a cada novo segundo que passava.
 
-### Fase 1 — *nome da fase*
+### Fase 1 — *Início*
 
 <img src="READMEFiles/Level1.png" width="560" alt="Fase 1">
 
-**Introduz:** *(mecânica principal)*
+**Introduz:** *Contexto Inicial*
 
-*Descrição do level design da fase 1.*
+*O jogador encontra o lugar abandonado e fica curioso para entender o que aconteceu, enquanto brinca com os controles e entende como se anda.*
 
-### Fase 2 — *nome da fase*
+### Fase 2 — *Pulos*
 
 <img src="READMEFiles/Level2.png" width="560" alt="Fase 2">
 
-**Introduz:** *(mecânica principal)*
+**Introduz:** *Salto entre plataformas*
 
-*Descrição do level design da fase 2.*
+*A partir daqui o jogador começa a entender como pular entre plataformas e o esforço que deve ser feito para cada distância de pulos.*
 
-### Fase 3 — *nome da fase*
+### Fase 3 — *Espinhos*
 
 <img src="READMEFiles/Level3.png" width="560" alt="Fase 3">
 
-**Introduz:** *(mecânica principal)*
+**Introduz:** *Senso de urgência*
 
-*Descrição do level design da fase 3.*
+*O jogador agora tem o teto (literalmente) caindo sobre sua cabeça e precisa correr para a saída o mais rápido possível. Ele já entende que existem plataformas que ele precisa pular antes que elas caiam, pois isso foi reforçado em um corredor intermediário entre a fase 2 e 3 com apenas eles. A única coisa que ele precisa fazer agora, em posse de como funciona cada mecânica, é vencer a ansiedade e não errar todo o caminho até o final, com tudo o que foi mostrado até agora.*
 
 ---
 
